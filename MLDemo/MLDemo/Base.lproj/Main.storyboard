@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEI-Ce-OGv">
+                                <rect key="frame" x="164" y="310" width="46" height="30"/>
+                                <state key="normal" title="换图片"/>
+                                <connections>
+                                    <action selector="click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7iL-ni-tIH"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testImage" translatesAutoresizingMaskIntoConstraints="NO" id="oit-rk-yhg">
+                                <rect key="frame" x="75" y="50" width="224" height="224"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="224" id="5Bn-Ln-nUo"/>
+                                    <constraint firstAttribute="height" constant="224" id="wjH-al-yUb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssQ-gL-65c">
+                                <rect key="frame" x="16" y="370" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oit-rk-yhg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="CNq-0g-zze"/>
+                            <constraint firstItem="oit-rk-yhg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HC7-yV-dep"/>
+                            <constraint firstItem="JEI-Ce-OGv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JeG-mZ-Z0g"/>
+                            <constraint firstItem="ssQ-gL-65c" firstAttribute="top" secondItem="JEI-Ce-OGv" secondAttribute="bottom" constant="30" id="eJS-i6-024"/>
+                            <constraint firstItem="ssQ-gL-65c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="jrN-rd-2MQ"/>
+                            <constraint firstItem="JEI-Ce-OGv" firstAttribute="top" secondItem="oit-rk-yhg" secondAttribute="bottom" constant="36" id="mat-kc-2DA"/>
+                            <constraint firstAttribute="trailing" secondItem="ssQ-gL-65c" secondAttribute="trailing" constant="16" id="pog-L6-Q5R"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="JEI-Ce-OGv" id="eLY-MA-REe"/>
+                        <outlet property="imageView" destination="oit-rk-yhg" id="gIc-Ql-I1h"/>
+                        <outlet property="label" destination="ssQ-gL-65c" id="ZBk-j3-F4w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="testImage" width="960" height="600"/>
+    </resources>
+</document>
